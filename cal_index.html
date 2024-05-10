@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Calculation Functions Assignment</title>
+</head>
+<body>
+    <h1>JavaScript Calculation Functions Assignment</h1>
+    <div>
+        <label for="num1">Number 1 :</label>
+        <input type="text" name="number" id="num1" />
+        <label for="num2">Number 2 :</label>
+        <input type="text" name="number" id="num2" />
+    </div>
+    <button type="button" id="Add" onclick="addition(parseFloat(document.getElementById('num1').value) , parseFloat(document.getElementById('num2').value))">Addition </button>
+    <p id ="resultAdd"></p>
+
+    <button type="button" id="sub" onclick="subtraction(parseFloat(document.getElementById('num1').value) , parseFloat(document.getElementById('num2').value))">Subtraction </button>
+    <p id ="resultSub"></p>
+
+    <button type="button" id="mul" onclick="multiplication(parseFloat(document.getElementById('num1').value) , parseFloat(document.getElementById('num2').value))">Multiplication </button>
+    <p id ="resultMul"></p>
+
+    <button type="button" id="div" onclick="division(parseFloat(document.getElementById('num1').value) , parseFloat(document.getElementById('num2').value))">Division </button>
+    <p id ="resultDiv"></p>
+
+    <div>
+        <label for="arr">Array :</label>
+        <input type="text" name="array" id="arr" />
+    </div>
+    <button type="button" id="array" onclick="arraySum()"> Sum of the given array </button>
+    <p id ="resultSumOfArray"></p>
+
+    <h3>Tax Calculator</h3>
+    <div>
+        <label for="iAmount">Input Amount :</label>
+        <input type="text" name="number" id="iAmount" />
+        <label for="tax">Tax % :</label>
+        <input type="text" name="number" id="tax" />
+    </div>
+    <button type="button" id="tacCal" onclick="taxCalculator(parseFloat(document.getElementById('iAmount').value) , parseFloat(document.getElementById('tax').value))">Tax Calculator </button>
+    <p id ="taxResult"></p>
+
+    <H3>Interest Calculator</H3>
+    <div>
+        <label for="pri">Principle :</label>
+        <input type="text" name="number" id="pri" />
+        <label for="period">Period :</label>
+        <input type="text" name="number" id="period" />
+        <label for="ROI">Rate of Interest:</label>
+        <input type="text" name="number" id="ROI" />
+         <!--<label for="rol">Rol on:</label>
+        <input type="text" name="number" id="rol" />
+        <button type="button" data-toggle="dropdown">Rol On :</button>
+            <ul>
+              <li><a href="#">day</a></li>
+              <li><a href="#">month</a></li>
+              <li><a href="#">year</a></li>
+              <li><a href="#">quarter</a></li>
+              <li><a href="#">half-year</a></li>
+              <li><a href="#">week</a></li>
+            </ul>-->
+            <label for="rol">Rol On:</label>
+            <select id="rol" name="rol on">
+              <option value="day">day</option>
+              <option value="week">week</option>
+              <option value="month">month</option>
+              <option value="year">year</option>
+              <option value="quarter">quarter</option>
+              <option value="half-year">half-year</option>
+            </select>
+    </div>
+    <button type="button" id="intCal" onclick="interestCalculator(parseFloat(document.getElementById('pri').value) , parseFloat(document.getElementById('period').value),parseFloat(document.getElementById('ROI').value),document.getElementById('rol').value)">Interest Calculator </button>
+    <p id ="interestResult"></p>
+
+    <h3>Random Number Generator</h3>
+    <div>
+        <label for="rnum">Input Amount :</label>
+        <input type="text" name="number" id="rnum" />     
+    </div>
+    <button type="button" id="randomCal" onclick="generateRandomNumber(parseFloat(document.getElementById('rnum').value))">Random Number Generate</button>
+    <p id ="randomNumResult"></p>
+
+    <h3>Vertical Sum of Array</h3>
+    <p id = "dataArray"></p>
+    <p id = "dataArrayResult"></p>
+    <script src="calculations.js"></script>
+
+</body>
+</html>
